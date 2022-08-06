@@ -11,13 +11,13 @@ public:
         this->data = data;
         this->next = NULL;
     }
-    // ~Node(){
-    //     int val = this->data;
-    //     if(this->next!=NULL){
-    //         this->next = NULL;
-    //     }
-    //     cout<<"Element with value "<<val<<" is deleted from the linked list.\n";
-    // }
+    ~Node(){
+        int val = this->data;
+        if(this->next!=NULL){
+            this->next = NULL;
+        }
+        cout<<"Element with value "<<val<<" is deleted from the linked list.\n";
+    }
 };
 
 // Approach 1
@@ -184,4 +184,3 @@ int main()
     print(head);
     return 0;
 }
-// Both functions are working fine... Hurray!!

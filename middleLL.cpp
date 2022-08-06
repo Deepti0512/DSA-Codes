@@ -157,7 +157,7 @@ Node* middle(Node* head){
     return middle;
 }
 Node* middleOptimised(Node* head){
-   // This approach is optimised since it will require linked list travesal for half length once.
+   // This approach is optimised since it will require linked list traversal for half length once.
     if(head==NULL || head->next == NULL){
         //case1: for empty or 1 element list
         return head;

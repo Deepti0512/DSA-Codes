@@ -380,6 +380,5 @@ int main()
     obj.insertAtHead(head,20);
     obj.print(head);
     */
-
     return 0;
 }

@@ -24,7 +24,6 @@ public:
         cout << "The node with value " << val << " is deleted\n";
     }
 };
-
 class SLL_functions
 {
 protected:
@@ -81,15 +80,7 @@ protected:
     void removeDuplicates_unsorted(Node *&head);
     void sort012_m1(Node *&head);
     Node *sort012_m2(Node *&head);
-    // Node *Add_Recursive(Node *&first, Node *&second);
-    // Node *Add_help(Node *&first, Node *&second, int p1, int p2, int carry);
-    // Node *Add2lists(Node *&first, Node *&second);
-    // Node *Add(Node *&first, Node *&second);
-    // Node *getMid(Node *&head);
-    // Node *merge2Sorted_list(Node *&left, Node *&right);
-    // Node *mergeSort(Node *&head);
 };
-
 void SLL_functions ::insertAtHead(Node *&head, int data)
 {
     Node *temp = new Node(data);
@@ -622,7 +613,6 @@ void SLL_functions ::InsertAtTail2(Node *&head, Node *&tail, int data)
         tail = temp;
     }
 }
-
 class Add
 {
 public:
@@ -797,7 +787,6 @@ public:
         return;
     }
 };
-
 class detect_n_remove_Loop : public SLL_functions
 {
     // this class contains 4 functions related to detection and removal of loop in a linked list
@@ -907,7 +896,6 @@ public:
         }
     }
 };
-
 class test : public SLL_functions
 {
 public:
@@ -917,6 +905,7 @@ public:
     }
     void Test(void)
     {   /*
+        Remove the comments in accordance with the function(s) to be tested!
         Node *head = NULL;
         insertAtHead(head, 100);
         insertAtTail(head, 200);
@@ -1019,7 +1008,6 @@ public:
         print(hehe);
         sort012_m2(hehe);
         print(hehe);
-        */ 
         Node *list1 = NULL;
         Node *list2 = NULL;
         insertAtHead(list1, 9);
@@ -1027,8 +1015,7 @@ public:
         insertAtHead(list1, 6);
         insertAtHead(list2, 2);
         insertAtHead(list2, 6);
-        //Node *res = Add2lists(list1, list2);
-        //print(res);
+        */ 
     }
 };
 
