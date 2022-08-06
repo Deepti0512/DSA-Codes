@@ -51,7 +51,6 @@ protected:
     /*class detect_n_remove_Loop                            // 15
     {
     //nested class ka fayeda nhi hua kyunki isme base class ke functions ka access nhi h.🥲
-    //kash mai bhi code kar pata to mai bhut time laga ta 🥲🥲🥲🥲🥲🥲🥲🥲 RIP my time!!!!!🥲🥲🥲🥲🥲
     public:
         bool detectLoop(Node *&head)
         {
