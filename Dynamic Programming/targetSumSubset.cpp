@@ -87,10 +87,12 @@ void targetSumDp(int arr[], int n, int target)
 // tabulation function 2
 bool targetSumTab(int n, int target, int ind, int arr[])
 {
-    vector<vector<bool>> dp(n, vector<bool>(target + 1, -1));
+    vector<vector<bool>> dp(n, vector<bool>(target + 1, 0));
     for (int i = 0; i < n; i++)
         dp[i][0] = true;
-    if(arr[0] <= target) dp[0][arr[0]] = true;
+    if (arr[0] <= target)
+        dp[0][arr[0]] = true;
+
     for (int ind = 1; ind < n; ind++)
     {
         for (int j = 1; j <= target; j++)
@@ -99,15 +101,15 @@ bool targetSumTab(int n, int target, int ind, int arr[])
             bool take = false;
             if (arr[ind] <= target)
                 take = dp[ind - 1][target - arr[ind]];
-            return dp[ind][target] = take | notTake;
+            dp[ind][target] = take | notTake;
         }
     }
-    return dp[n-1][target];
+    return dp[n - 1][target];
 }
-//space optimisation
+// space optimisation
 bool targetSumTabSo(int n, int target, int ind, int arr[])
 {
-    vector<bool> prev (target+1,0), curr(target + 1, 0);
+    vector<bool> prev(target + 1, 0), curr(target + 1, 0);
     prev[0] = curr[0] = 1;
     prev[arr[0]] = true;
     for (int ind = 1; ind < n; ind++)
@@ -118,7 +120,7 @@ bool targetSumTabSo(int n, int target, int ind, int arr[])
             bool take = false;
             if (arr[ind] <= target)
                 take = prev[target - arr[ind]];
-             curr[target] = take | notTake;
+            curr[target] = take | notTake;
         }
         prev = curr;
     }

@@ -28,7 +28,7 @@ void knapSnack(int n, int weight[], int value[], int capacity)
 // unbounded knapsack can be solved like coin change (both combination and permuation logic give same answer here)
 void unboundedKnapSack1(int n, int value[], int weight[], int capacity)
 {
-    //combination wala logic
+    // combination wala logic
     vector<int> dp(capacity + 1, 0);
     dp[0] = 0;
     for (int i = 0; i < n; i++)
@@ -45,7 +45,7 @@ void unboundedKnapSack1(int n, int value[], int weight[], int capacity)
 }
 void unboundedKnapSack2(int n, int value[], int weight[], int capacity)
 {
-    //permutation wala logic
+    // permutation wala logic
     vector<int> dp(capacity + 1, 0);
     dp[0] = 0;
     for (int cap = 1; cap <= capacity; cap++)
@@ -69,14 +69,8 @@ void unboundedKnapSack2(int n, int value[], int weight[], int capacity)
     }
     cout << dp[capacity] << "\n";
 }
-int main()
-{
-    int n = 5;
-    int weight[n] = {2, 5, 1, 3, 4};
-    int value[n] = {15, 14, 10, 45, 30};
-    int capacity = 7;
-    knapSnack(n, weight, value, capacity);
-    unboundedKnapSack1(n, value, weight, capacity);
-    unboundedKnapSack2(n, value, weight, capacity);
-    return 0;
-}
+/*
+Fractional knapsack : Can be solved using greedy.
+Approach:
+The basic idea of the greedy approach is to calculate the ratio value/weight for each item and sort the item on the basis of this ratio. Then take the item with the highest ratio and add them until we can’t add the next item as a whole and at the end add the next item as much as we can. Which will always be the optimal solution to this problem.
+*/
