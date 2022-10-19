@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
 
+/* Applications: if we want the frequency of an element then we can simply get the first
+and last occurence and get their difference. This will be done in 2*(logn) 
+if we want frequency of all elements then it can be done in n*logn instead of n², 
+this can also be done using a hashmap though.
+*/
+
 int firstOcc(int arr[], int n, int key)
 {
     int ans = -1;
