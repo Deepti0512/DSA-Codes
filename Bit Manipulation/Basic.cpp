@@ -78,14 +78,21 @@ public:
             cnt++;
         }
         return cnt;
-        // method 2: TC: O(total no.of bits in n)
-        //  while(n!=0){
-        //      if(n&1){
-        //          cnt++;
-        //      }
-        //      n = n>>1;
-        //  }
-        //  return cnt;
+        /*
+        method 2: TC: O(total no.of bits in n)
+         while(n!=0){
+             if(n&1){
+                 cnt++;
+             }
+             n = n>>1;
+         }
+         return cnt;
+        */
+    }
+    bool isPowerOf2(int x)
+    {
+        /* First x in the below expression is for the case when * x is 0 */
+        return x && (!(x & (x - 1)));
     }
 };
 
