@@ -111,3 +111,18 @@ int main()
     cout << ninjaTraining(n, points) << "\n";
     return 0;
 }
+
+/* 
+Sample Input1:
+3
+10 40 70
+20 50 80
+30 60 90
+output: 11
+Sample input 2:
+3
+10 40 70
+20 50 80
+30 60 90
+output: 210
+*/ 
