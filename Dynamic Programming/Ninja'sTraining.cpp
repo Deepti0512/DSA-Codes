@@ -89,7 +89,8 @@ int SpO(int n, vector<vector<int>> &points){
 int ninjaTraining(int n, vector<vector<int>> &points)
 {
     vector<vector<int>> dp(n, vector<int>(4, -1));
-    return func(n - 1, 3, points, dp);
+    // return func(n - 1, 3, points, dp);
+    return tabu(n,points);
 }
 
 int main()
