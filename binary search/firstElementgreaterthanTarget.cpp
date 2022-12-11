@@ -25,7 +25,24 @@ int firstElementGreaterThanEqualtoTarget(int arr[], int n, int target)
     if(high == low && arr[low] >= target && ans == -1)ans = low;
     return ans;
 }
-
+int lowerBound(int arr[],int n, int target){
+    int low = 0;
+    int high = n - 1;
+    int ans = -1;
+    int mid = low + (high-low)/2;
+    while(low<high){
+        if(arr[mid]<=target){
+            ans = mid;
+            low = mid;
+        }
+        else{
+            high = mid-1;
+        }
+        mid = low + (high - low) / 2;
+    }
+    if(high == low && arr[low] >= target && ans == -1)ans = low;
+    return ans;
+}
 // method 2 : use STL upper bound function
 int upperBound(int arr[], int n, int target)
 {

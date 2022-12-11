@@ -1,5 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
+void print(vector<vector<int>>&dp, int n, int cap){
+    for(int i=0; i<=n;i++){
+        for(int j = 0; j <= cap; j++){
+            cout<<dp[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+}
 int maximum(int a, int b)
 {
     return a > b ? a : b;
